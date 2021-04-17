@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="ir_ui_menu_form_externla_id" model="ir.ui.view">
+            <field name="name">ir.ui.menu form.externla.id</field>
+            <field name="model">ir.ui.menu</field>
+            <field name="inherit_id" ref="base.edit_menu_access"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='sequence']" position="after">
+                    <field name="external_id"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
